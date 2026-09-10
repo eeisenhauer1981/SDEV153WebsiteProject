@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
   background-color: #f4f1e8;
 }
@@ -6,17 +9,50 @@ body {
   max-width: 1250px;
   height: 100%;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
   margin: 100px auto 0px auto;
   position: center;
+}
+
+.recipe-list-container {
+  background-color: #768953;
+  margin: 0px 10px 0px 10px;
 }
 
 h1 {
   color: #768953;
   text-align: center;
+  font-family: 'Gilda Display', 'Georgia', 'Serif';
+}
+
+h2{
+  color: white;
+  font-family: 'Gilda Display', 'Georgia', 'Serif';
+  border-bottom: 2px solid white;
+  margin: 0px 20px 0px 20px;
+  padding: 30px 0px 10px 0px;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.home-page-nav {
+  font-family: 'Gilda Display', 'Georgia', 'Serif';
+  list-style-type: none;
+  color: white;
+  display: flex;
+  text-align: center;
+  gap: 7px;
+  padding: 0px;
+  margin: 0px 10px 0px 10px;
+}
+
+.home-page-nav li {
+  flex: 1;
+  background-color: #768953;
+  border-radius: 5px 5px 0px 0px;
+  padding:0px;
+  margin: 0px;
 }
