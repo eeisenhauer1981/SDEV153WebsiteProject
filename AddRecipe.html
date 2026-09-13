@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>In My Kitchen</title>
+  </head>
+  <header>
+    <div class = "header-title">
+      <h1>In My Kitchen</h1>
+      <button>
+        <img src="images/menu.svg">
+      </button>
+    </div>
+    <nav>
+        <ul>
+          <li><a href="CurrentMenu.html">View Current Menu</a></li>
+          <li><a href="CreateMenu.html">Create New Menu</a></li>
+          <li><a href="AllRecipes.html">View All Recipes</a></li>
+          <li>Add New Recipe</li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+  </header>
+  <body>
+    <div class = "anchor">
+      <h1>Add a New Recipe</h1>
+      <form>
+        <label for="recipename">Recipe Name*</label><br>
+        <input type="text" id="recipename" name="recipename" required><br>
+        <label for="recipelink">Recipe Link*</label><br>
+        <input type="url" id="recipelink" name="recipelink" required>
+        <label for="recipetype">Recipe Type*</label><br>
+        <select name="recipetype" id="recipetype" required>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+        </select><br>
+        <label for="ingredients">Ingredients</label><br>
+        <textarea type="text" id="ingredients" name="ingredients"></textarea><br>
+        <label for="directions">Directions</label><br>
+        <textarea type="text" id="directions" name="directions"></textarea><br>
+        <input type="submit" value="Add Recipe">
+      </form>
+    </div>
+  </body>
+    <footer>
+    <h4>Site by Emily Eisenhauer | 2026</h4>
+  </footer>
+</html>
