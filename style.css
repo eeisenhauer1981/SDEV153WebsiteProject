@@ -139,12 +139,7 @@ header a {
   color: var(--accent-color);
 }
 
-.recipe-list-container a {
-  border-radius: 5px;
-  width: 25%;
-  background-color: var(--base-color);
-  padding: 20px;
-}
+
 
 /*lists*/
 ul, ol {
@@ -189,6 +184,13 @@ header ul {
 
 header li {
   color: var(--accent-color);
+}
+
+.recipe-list-container li {
+  border-radius: 5px;
+  width: 25%;
+  background-color: var(--base-color);
+  padding: 20px;
 }
 
 /*p*/
