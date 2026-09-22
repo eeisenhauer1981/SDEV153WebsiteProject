@@ -14,7 +14,7 @@
     </div>
     <nav>
         <ul>
-          <li><a href="CreateMenu.html">View Current Menu</a></li>
+          <li><a href="CurrentMenu.html">View Current Menu</a></li>
           <li>Create New Menu</li>
           <li><a href="AllRecipes.html">View All Recipes</a></li>
           <li><a href="AddRecipe.html">Add New Recipe</a></li>
@@ -25,61 +25,21 @@
   <body>
     <div class = "anchor">
       <h1>Create a New Menu</h1>
-      <div class = "recipe-list-container">
-        <form class="create-menu">
-          <div class="create-menu-inputs">
-            <label for="breakfast">Breakfasts:</label>
-            <input type="number" id="breakfast" name="breakfast">
-            <label for="lunch">Lunches:</label>
-            <input type="number" id="lunch" name="lunch">
-            <label for="dinner">Dinners:</label>
-            <input type="number" id="dinner" name="dinner">
-          </div>
-          <input type="submit" value="Create New Menu">
-        </form>
-        <h2>Breakfast</h2>
-        <ul>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>recipe url</p>
-          </li>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>https://learn.zybooks.com/zybook/SDEV153-11P-IO-202620-I-81X/chapter/5/section/1</p>
-          </li>
-        </ul>
-        <h2>Lunch</h2>
-        <ul>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>recipe url</p>
-          </li>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>https://learn.zybooks.com/zybook/SDEV153-11P-IO-202620-I-81X/chapter/5/section/1</p>
-          </li>
-        </ul>
-        <h2>Dinner</h2>
-        <ul>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>recipe url</p>
-          </li>
-          <li>
-            <img src="images/no image.jpg" alt="description">
-            <h3>Recipe Name</h3>
-            <p>https://learn.zybooks.com/zybook/SDEV153-11P-IO-202620-I-81X/chapter/5/section/1</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <form class="create-menu">
+        <div class="create-menu-inputs">
+          <label for="breakfast">Breakfasts:</label>
+          <input type="number" id="breakfast" name="breakfast">
+          <label for="lunch">Lunches:</label>
+          <input type="number" id="lunch" name="lunch">
+          <label for="dinner">Dinners:</label>
+          <input type="number" id="dinner" name="dinner">
+        </div>
+        <input type="submit" value="Create New Menu">
+      </form>
   </body>
     <footer>
     <h4>Site by Emily Eisenhauer | 2026</h4>
   </footer>
+  <script src="script.js"></script>
+  <script src="CreateMenu.js"></script>
 </html>

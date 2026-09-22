@@ -1,15 +1,13 @@
-//starter recipe list
-let recipes = []
+//loads recipe collection
+let recipes = [];
 //checks to see if any recipes are saved in localStorage
 if (localStorage.getItem("allRecipes") !== null ) { 
     //if so, saved recipes are retrieved and assigned to recipes[]
-    console.log("recipes found")
     let getJSON = localStorage.getItem("allRecipes"); 
     recipes = JSON.parse(getJSON);
 }
 //if no recipes are saved in localStorage, then default starter recipe list is assigned to recipes[]
 else {
-    console.log("no recipes saved")
     recipes = [
         {
             id: 1,
@@ -54,6 +52,19 @@ else {
             category: "dinner"
         }
     ]
+}
+
+//loads current menu
+let currentMenu = [];
+//checks to see if a menu is saved in localStorage
+if (localStorage.getItem("menuRecipes") !== null ) { 
+    //if so, menu recipes are retrieved and assigned to currentMenu[]
+    let getJSON = localStorage.getItem("menuRecipes"); 
+    currentMenu = JSON.parse(getJSON);
+}
+//if no recipes are saved in localStorage, then default starter recipe list is assigned to recipes[]
+else {
+    currentMenu= [];
 }
 
 
