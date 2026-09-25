@@ -24,7 +24,7 @@ body {
   position: center;
 }
 
-.recipe-list-container {
+.recipe-list-container, .information {
   background-color: var(--accent-color);
   margin: 0px 10px 0px 10px;
 }
@@ -101,11 +101,19 @@ h2{
   border-bottom: 2px solid var(--accent-color);
 }
 
-.recipe-list-container h3 {
+h3 {
   font-family: var(--fancy-font), 'Georgia', 'Serif';
   font-weight: 400;
+}
+
+.recipe-list-container h3 {
   font-style: normal;
   color: var(--accent-color);
+}
+
+.information h3 {
+  font-style: italic;
+  color: var(--base-color);
 }
 
 footer h4 {
