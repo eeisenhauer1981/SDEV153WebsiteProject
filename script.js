@@ -62,9 +62,18 @@ if (localStorage.getItem("menuRecipes") !== null ) {
     let getJSON = localStorage.getItem("menuRecipes"); 
     currentMenu = JSON.parse(getJSON);
 }
-//if no recipes are saved in localStorage, then default starter recipe list is assigned to recipes[]
-else {
-    currentMenu= [];
-}
+
+//menu button to expans/collapse nav menu on content pages
+let navButton = document.querySelector(".pages-nav-button");
+let navMenu = document.querySelector(".pages-nav");
+navMenu.style.display = "none";
+navButton.addEventListener("click", function(clickEvent) {
+    if (navMenu.style.display=="none") {
+        navMenu.style.display="flex";
+    }
+    else {
+        navMenu.style.display="none";
+    }
+});
 
 

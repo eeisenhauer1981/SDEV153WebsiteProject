@@ -9,11 +9,11 @@
     <div class = "header-title">
       <h1>In My Kitchen</h1>
       <!--button to open nav menu-->
-      <button>
+      <button class="pages-nav-button">
         <img src="images/menu.svg">
       </button>
     </div>
-    <nav>
+    <nav class="pages-nav">
         <ul>
           <li><a href="CurrentMenu.html">View Current Menu</a></li>
           <li>Create New Menu</li>
@@ -27,16 +27,25 @@
     <div class = "anchor">
       <h1>Create a New Menu</h1>
       <form class="create-menu">
-        <div class="create-menu-inputs">
-          <label for="breakfast">Breakfasts:</label>
-          <input type="number" id="breakfast" name="breakfast">
-          <label for="lunch">Lunches:</label>
-          <input type="number" id="lunch" name="lunch">
-          <label for="dinner">Dinners:</label>
-          <input type="number" id="dinner" name="dinner">
-        </div>
+        <ul class="create-menu-inputs">
+          <li>
+            <label for="breakfast">Breakfasts:</label>
+            <input type="number" id="breakfast" name="breakfast">
+          </li>
+          <li>
+            <label for="lunch">Lunches:</label>
+            <input type="number" id="lunch" name="lunch">
+          </li>
+          <li>
+            <label for="dinner">Dinners:</label>
+            <input type="number" id="dinner" name="dinner">
+          </li>
+        </ul>
         <input type="submit" value="Create New Menu">
       </form>
+      <table class="menu-summary">
+
+      </table>
     </div>
     <footer>
       <h4>Site by Emily Eisenhauer | 2026</h4>
