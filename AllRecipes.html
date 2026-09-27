@@ -6,45 +6,53 @@
     <link href="style.css" rel="stylesheet">
     <title>In My Kitchen</title>
   </head>
-  <header>
-    <div class = "header-title">
-      <h1>In My Kitchen</h1>
-      <!--button to launch nav menu-->
-      <button class="pages-nav-button">
-        <img src="images/menu.svg">
-      </button>
-    </div>
-    <nav class="pages-nav">
-        <ul>
-          <li><a href="CurrentMenu.html">View Current Menu</a></li>
-          <li><a href="CreateMenu.html">Create New Menu</a></li>
-          <li>View All Recipes</li>
-          <li><a href="AddRecipe.html">Add New Recipe</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-  </header>
   <body>
     <div class="anchor">
-      <h1>Recipe Collection</h1>
-      <div class = "recipe-list-container">
-        <h2>Breakfast</h2>
-        <ul class="breakfast">
-          
-        </ul>
-        <h2>Lunch</h2>
-        <ul class="lunch">
-          
-        </ul>
-        <h2>Dinner</h2>
-        <ul class="dinner">
-          
-        </ul>
-      </div>
+      <header>
+        <div class = "header-title">
+          <h1>In My Kitchen</h1>
+          <!--button to launch nav menu-->
+          <button class="pages-nav-button">
+            <img src="images/menu.svg">
+          </button>
+        </div>
+        <nav class="pages-nav">
+          <ul>
+            <li><a href="CurrentMenu.html">View Current Menu</a></li>
+            <li><a href="CreateMenu.html">Create New Menu</a></li>
+            <li>View All Recipes</li>
+            <li><a href="AddRecipe.html">Add New Recipe</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Recipe Collection</h1>
+        <div class = "recipe-list-container">
+          <button class="breakfast-recipe-reveal">
+            <h2>Breakfast</h2>
+          </button>
+          <ul class="breakfast">
+          <!--AllRecipes.js adds <li>-->
+          </ul>
+          <button class="lunch-recipe-reveal">
+            <h2>Lunch</h2>
+          </button>
+          <ul class="lunch">
+          <!--AllRecipes.js adds <li>-->
+          </ul>
+          <button class="dinner-recipe-reveal">
+            <h2>Dinner</h2>
+          </button>
+          <ul class="dinner">
+          <!--AllRecipes.js adds <li>-->
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <h4>Site by Emily Eisenhauer | 2026</h4>
+      </footer>
     </div>
-    <footer>
-      <h4>Site by Emily Eisenhauer | 2026</h4>
-    </footer>
   </body>
   <!--script.js runs on every page to load current recipes and menu lists-->
   <script src="script.js"></script>

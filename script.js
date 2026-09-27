@@ -63,7 +63,7 @@ if (localStorage.getItem("menuRecipes") !== null ) {
     currentMenu = JSON.parse(getJSON);
 }
 
-//menu button to expans/collapse nav menu on content pages
+//menu button to expand/collapse nav menu on content pages
 let navButton = document.querySelector(".pages-nav-button");
 let navMenu = document.querySelector(".pages-nav");
 navMenu.style.display = "none";
@@ -76,4 +76,62 @@ navButton.addEventListener("click", function(clickEvent) {
     }
 });
 
+//media query to determine viewport width
+let mobileView = window.matchMedia("(min-width: 500px)");
 
+//button to expand/collapse breakfast recipe list on content pages for mobile view
+let breakfastExpandButton = document.querySelector(".breakfast-recipe-reveal");
+let breakfastRecipes = document.querySelector(".breakfast");
+
+if (mobileView.matches) {
+    breakfastRecipes.style.display= "grid";
+}
+else {
+    breakfastRecipes.style.display = "none";
+    breakfastExpandButton.addEventListener("click", function(clickEvent) {
+        if (breakfastRecipes.style.display=="none") {
+            breakfastRecipes.style.display="flex";
+        }
+        else {
+            breakfastRecipes.style.display="none";
+        }
+    });
+}
+
+//button to expand/collapse lunch recipe list on content pages for mobile view
+let lunchExpandButton = document.querySelector(".lunch-recipe-reveal");
+let lunchRecipes = document.querySelector(".lunch");
+
+if (mobileView.matches) {
+    lunchRecipes.style.display= "grid";
+}
+else {
+    lunchRecipes.style.display = "none";
+    lunchExpandButton.addEventListener("click", function(clickEvent) {
+        if (lunchRecipes.style.display=="none") {
+            lunchRecipes.style.display="flex";
+        }
+        else {
+            lunchRecipes.style.display="none";
+        }
+    });
+}
+
+//button to expand/collapse dinner recipe list on content pages for mobile view
+let dinnerExpandButton = document.querySelector(".dinner-recipe-reveal");
+let dinnerRecipes = document.querySelector(".dinner");
+
+if (mobileView.matches) {
+    dinnerRecipes.style.display= "grid";
+}
+else {
+    dinnerRecipes.style.display = "none";
+    dinnerExpandButton.addEventListener("click", function(clickEvent) {
+        if (dinnerRecipes.style.display=="none") {
+            dinnerRecipes.style.display="flex";
+        }
+        else {
+            dinnerRecipes.style.display="none";
+        }
+    });
+}

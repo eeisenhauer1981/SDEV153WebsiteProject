@@ -6,51 +6,55 @@
     <link href="style.css" rel="stylesheet">
     <title>In My Kitchen</title>
   </head>
-  <header>
-    <div class = "header-title">
-      <h1>In My Kitchen</h1>
-      <!--button to open nav menu-->
-      <button class="pages-nav-button">
-        <img src="images/menu.svg">
-      </button>
-    </div>
-    <nav class="pages-nav">
-        <ul>
-          <li><a href="CurrentMenu.html">View Current Menu</a></li>
-          <li>Create New Menu</li>
-          <li><a href="AllRecipes.html">View All Recipes</a></li>
-          <li><a href="AddRecipe.html">Add New Recipe</a></li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-  </header>
   <body>
-    <div class = "anchor">
-      <h1>Create a New Menu</h1>
-      <form class="create-menu">
-        <ul class="create-menu-inputs">
-          <li>
-            <label for="breakfast">Breakfasts:</label>
-            <input type="number" id="breakfast" name="breakfast">
-          </li>
-          <li>
-            <label for="lunch">Lunches:</label>
-            <input type="number" id="lunch" name="lunch">
-          </li>
-          <li>
-            <label for="dinner">Dinners:</label>
-            <input type="number" id="dinner" name="dinner">
-          </li>
-        </ul>
-        <input type="submit" value="Create New Menu">
-      </form>
-      <table class="menu-summary">
-
-      </table>
+    <div class="anchor">
+      <header>
+        <div class = "header-title">
+          <h1>In My Kitchen</h1>
+          <!--button to open nav menu-->
+          <button class="pages-nav-button">
+            <img src="images/menu.svg">
+          </button>
+        </div>
+        <nav class="pages-nav">
+          <ul>
+            <li><a href="CurrentMenu.html">View Current Menu</a></li>
+            <li>Create New Menu</li>
+            <li><a href="AllRecipes.html">View All Recipes</a></li>
+            <li><a href="AddRecipe.html">Add New Recipe</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Create a New Menu</h1>
+        <form class="create-menu">
+          <ul class="create-menu-inputs">
+            <li>
+              <label for="breakfast">Breakfasts:</label>
+              <input type="number" id="breakfast" name="breakfast">
+            </li>
+            <li>
+              <label for="lunch">Lunches:</label>
+              <input type="number" id="lunch" name="lunch">
+            </li>
+            <li>
+              <label for="dinner">Dinners:</label>
+              <input type="number" id="dinner" name="dinner">
+            </li>
+          </ul>
+          <div class="submit-container">
+            <input type="submit" value="Create New Menu">
+          </div>
+        </form>
+        <table class="menu-summary">
+          <!--CreateMenu.js adds <tr>-->
+        </table>
+      </main>
+      <footer>
+        <h4>Site by Emily Eisenhauer | 2026</h4>
+      </footer>
     </div>
-    <footer>
-      <h4>Site by Emily Eisenhauer | 2026</h4>
-    </footer>
   </body>
   <!--script.js runs on every page to load recipe and menu list-->
   <script src="script.js"></script>

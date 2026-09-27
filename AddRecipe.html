@@ -6,62 +6,60 @@
     <link href="style.css" rel="stylesheet">
     <title>In My Kitchen</title>
   </head>
-  <header>
-    <div class = "header-title">
-      <h1>In My Kitchen</h1>
-      <!--button to open navigation menu-->
-      <button class="pages-nav-button">
-        <img src="images/menu.svg">
-      </button>
-    </div>
-    <nav class="pages-nav">
-        <ul>
-          <li><a href="CurrentMenu.html">View Current Menu</a></li>
-          <li><a href="CreateMenu.html">Create New Menu</a></li>
-          <li><a href="AllRecipes.html">View All Recipes</a></li>
-          <li>Add New Recipe</li>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-  </header>
   <body>
-    <div class = "anchor">
-      <h1>Add a New Recipe</h1>
-      <form class="add-recipe">
-        <ul class="add-recipe-inputs">
-          <li>
-            <label for="recipename">Recipe Name*</label>
-            <input type="text" id="recipename" name="recipename" required>
-          </li>
-          <li>
-            <label for="recipelink">Recipe Link*</label>
-            <input type="url" id="recipelink" name="recipelink" required>
-          </li>
-          <li>
-            <label for="recipetype">Recipe Type*</label>
-            <select name="recipetype" id="recipetype" required>
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-            </select>
-          </li>
-          <li>
-            <label for="recipeimagelink">Image Link</label>
-            <input type="url" id="recipeimagelink" name="recipeimagelink">
-          </li>
-          <!--not adding in for now
-          <label for="ingredients">Ingredients</label><br>
-          <textarea type="text" id="ingredients" name="ingredients"></textarea><br>
-          <label for="directions">Directions</label><br>
-          <textarea type="text" id="directions" name="directions"></textarea><br>
-          -->
-        </ul>
-        <input type="submit" value="Add Recipe">
-      </form>
+    <div class="anchor">
+      <header>
+        <div class = "header-title">
+          <h1>In My Kitchen</h1>
+          <!--button to open navigation menu-->
+          <button class="pages-nav-button">
+            <img src="images/menu.svg">
+          </button>
+        </div>
+        <nav class="pages-nav">
+          <ul>
+            <li><a href="CurrentMenu.html">View Current Menu</a></li>
+            <li><a href="CreateMenu.html">Create New Menu</a></li>
+            <li><a href="AllRecipes.html">View All Recipes</a></li>
+            <li>Add New Recipe</li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Add a New Recipe</h1>
+        <form class="add-recipe">
+          <ul class="add-recipe-inputs">
+            <li>
+              <label for="recipename">Recipe Name*</label>
+              <input type="text" id="recipename" name="recipename" required>
+            </li>
+            <li>
+              <label for="recipelink">Recipe Link*</label>
+              <input type="url" id="recipelink" name="recipelink" required>
+            </li>
+            <li>
+              <label for="recipetype">Recipe Type*</label>
+              <select name="recipetype" id="recipetype" required>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+              </select>
+            </li>
+            <li>
+              <label for="recipeimagelink">Image Link</label>
+              <input type="url" id="recipeimagelink" name="recipeimagelink">
+            </li>
+          </ul>
+          <div class="submit-container">
+            <input type="submit" value="Add Recipe">
+          </div>
+        </form>
+      </main>
+      <footer>
+        <h4>Site by Emily Eisenhauer | 2026</h4>
+      </footer>
     </div>
-    <footer>
-      <h4>Site by Emily Eisenhauer | 2026</h4>
-    </footer>
   </body>
   <!-- script.js runs on every page to load recipes and menu lists-->
   <script src="script.js"></script>
