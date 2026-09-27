@@ -25,6 +25,6 @@ for (let i = 0; i < recipes.length; i++) {
     //creates a new li and assigns individual recipe information to the correct HTML element to be displayed on the page
     let singleRecipe = document.createElement("li");
     singleRecipe.innerHTML = 
-        `<a href=${recipes[i].url} target="_blank"><img src=${recipes[i].image} alt="imgDescription"><h3>${recipes[i].name}</h3><p>View Recipe</p></a>`;
+        `<a href=${recipes[i].url} target="_blank"><img src=${recipes[i].image} alt=${imgDescription}><div class="recipe-card-text"><h3>${recipes[i].name}</h3><p>View Recipe</p></div></a>`;
     recipeList.appendChild(singleRecipe);
 }

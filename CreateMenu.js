@@ -5,6 +5,8 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     submitEvent.preventDefault();
     //clears previous menu and returns an empty currentMenu array
     currentMenu.splice(0);
+    //test-delete
+    console.log(currentMenu);
     //grabs form values and assigns to variables
     let breakfastCount=document.getElementById("breakfast").value;
     let lunchCount=document.getElementById("lunch").value;
@@ -84,7 +86,7 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     //build
     //add "success message" as table caption
     let successMessage = document.createElement("caption");
-    successMessage.innerHTML = "Your menu has been created. Here's what's cooking in your kitchen:";
+    successMessage.innerHTML = `Your menu has been created. <a href="CurrentMenu.html">Here's what's cooking</a> in your kitchen.`;
     menuTable.appendChild(successMessage);
 
     //add header row to table
@@ -98,30 +100,39 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
         let breakfastData;
         let lunchData;
         let dinnerData;
+        let breakfastClass;
+        let lunchClass;
+        let dinnerClass;
         //assign breakfast for row
         if (i < breakfasts.length) {
             breakfastData = breakfasts[i].name;
+            breakfastClass = "filled";
         }
         else {
-            breakfastData = "No breakfast selected for this day"
+            breakfastData = "No breakfast selected for this day";
+            breakfastClass = "empty";
         }
         //assign lunch for row
         if (i < lunches.length) {
             lunchData = lunches[i].name;
+            lunchClass = "filled";
         }
         else {
-            lunchData = "No lunch selected for this day"
+            lunchData = "No lunch selected for this day";
+            lunchClass = "empty";
         }
         //assign dinner for row
         if (i < dinners.length) {
             dinnerData = dinners[i].name;
+            dinnerClass = "filled";
         }
         else {
-            dinnerData = "No dinner selected for this day"
+            dinnerData = "No dinner selected for this day";
+            dinnerClass = "empty";
         }
         let dataRow = document.createElement("tr");
         dataRow.innerHTML = 
-            `<td>${dayData}</td><td>${breakfastData}</td><td>${lunchData}</td><td>${dinnerData}</td>`;
+            `<td>${dayData}</td><td class=${breakfastClass}>${breakfastData}</td><td class=${lunchClass}>${lunchData}</td><td class=${dinnerClass}>${dinnerData}</td>`;
         menuTable.appendChild(dataRow);
     }
 })
