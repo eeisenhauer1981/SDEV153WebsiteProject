@@ -394,5 +394,16 @@ caption {
     align-items: center;
     text-align: center;
   }
+
+  .recipe-card-text {
+    margin: 0;
+  }
+
+  /*img*/
+  .recipe-list-container img {
+    width: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 
