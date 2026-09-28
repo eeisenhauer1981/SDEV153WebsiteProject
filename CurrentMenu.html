@@ -12,8 +12,8 @@
         <div class = "header-title">
           <h1>In My Kitchen</h1>
           <!--button to display nav menu-->
-          <button class="pages-nav-button">
-            <img src="images/menu.svg">
+          <button class="pages-nav-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="pages-navigation">
+            <img src="images/menu.svg" alt="">
           </button>
         </div>
         <nav class="pages-nav">
@@ -32,19 +32,19 @@
           <button class="breakfast-recipe-reveal">
             <h2>Breakfast</h2>
           </button>
-          <ul class="breakfast">
+          <ul class="breakfast" id="breakfast-reveal">
           <!--CurrentMenu.js adds <li>-->
           </ul>
           <button class="lunch-recipe-reveal">
             <h2>Lunch</h2>
           </button>
-          <ul class="lunch">
+          <ul class="lunch" id="lunch-reveal">
           <!--CurrentMenu.js adds <li>-->
           </ul>
           <button class="dinner-recipe-reveal">
             <h2>Dinner</h2>
           </button>
-          <ul class="dinner">
+          <ul class="dinner" id="dinner-reveal">
           <!--CurrentMenu.js adds <li>-->
           </ul>
         </div>

@@ -70,30 +70,38 @@ navMenu.style.display = "none";
 navButton.addEventListener("click", function(clickEvent) {
     if (navMenu.style.display=="none") {
         navMenu.style.display="flex";
+        navButton.setAttribute("aria-expanded", "true");
     }
     else {
         navMenu.style.display="none";
+        navButton.setAttribute("aria-expanded", "false");
     }
 });
 
 //media query to determine viewport width
 let mobileView = window.matchMedia("(min-width: 500px)");
 
-//button to expand/collapse breakfast recipe list on content pages for mobile view
+//button to expand/collapse recipe list on content pages for mobile view
 let breakfastExpandButton = document.querySelector(".breakfast-recipe-reveal");
 let breakfastRecipes = document.querySelector(".breakfast");
 
 if (mobileView.matches) {
     breakfastRecipes.style.display= "grid";
+    breakfastExpandButton.setAttribute("aria-disabled", "true");
 }
 else {
     breakfastRecipes.style.display = "none";
+    breakfastExpandButton.setAttribute("aria-label", "Expand breakfast recipe list");
+    breakfastExpandButton.setAttribute("aria-expanded", "false");
+    breakfastExpandButton.setAttribute("aria-controls", "breakfast-reveal");
     breakfastExpandButton.addEventListener("click", function(clickEvent) {
         if (breakfastRecipes.style.display=="none") {
             breakfastRecipes.style.display="flex";
+            breakfastExpandButton.setAttribute("aria-expanded", "true");
         }
         else {
             breakfastRecipes.style.display="none";
+            breakfastExpandButton.setAttribute("aria-expanded", "false");
         }
     });
 }
@@ -104,15 +112,21 @@ let lunchRecipes = document.querySelector(".lunch");
 
 if (mobileView.matches) {
     lunchRecipes.style.display= "grid";
+    lunchExpandButton.setAttribute("aria-disabled", "true");
 }
 else {
     lunchRecipes.style.display = "none";
+    lunchExpandButton.setAttribute("aria-label", "Expand lunch recipe list");
+    lunchExpandButton.setAttribute("aria-expanded", "false");
+    lunchExpandButton.setAttribute("aria-controls", "lunch-reveal");
     lunchExpandButton.addEventListener("click", function(clickEvent) {
         if (lunchRecipes.style.display=="none") {
             lunchRecipes.style.display="flex";
+            lunchExpandButton.setAttribute("aria-expanded", "true");
         }
         else {
             lunchRecipes.style.display="none";
+            lunchExpandButton.setAttribute("aria-expanded", "false");
         }
     });
 }
@@ -123,15 +137,21 @@ let dinnerRecipes = document.querySelector(".dinner");
 
 if (mobileView.matches) {
     dinnerRecipes.style.display= "grid";
+    dinnerExpandButton.setAttribute("aria-disabled", "true");
 }
 else {
     dinnerRecipes.style.display = "none";
+    dinnerExpandButton.setAttribute("aria-label", "Expand dinner recipe list");
+    dinnerExpandButton.setAttribute("aria-expanded", "false");
+    dinnerExpandButton.setAttribute("aria-controls", "dinner-reveal");
     dinnerExpandButton.addEventListener("click", function(clickEvent) {
         if (dinnerRecipes.style.display=="none") {
             dinnerRecipes.style.display="flex";
+            dinnerExpandButton.setAttribute("aria-expanded", "true");
         }
         else {
             dinnerRecipes.style.display="none";
+            dinnerExpandButton.setAttribute("aria-expanded", "false");
         }
     });
 }

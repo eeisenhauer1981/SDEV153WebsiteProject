@@ -362,7 +362,7 @@ caption {
   text-decoration: underline;
 }
 
-/*mobile*/
+/*desktop*/
 
 @media screen and (min-width: 500px) {
   /*containers*/
@@ -405,5 +405,6 @@ caption {
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }
+
 }
 
