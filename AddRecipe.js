@@ -1,8 +1,6 @@
 
 //finds the recipe form
 let addRecipeForm = document.querySelector(".add-recipe");
-//testing - remove
-console.log(recipes.length);
 //creates form submit event - add new recipe elements entered into the form as a new recipe object in the recipes array
 addRecipeForm.addEventListener("submit", function(submitEvent) {
     submitEvent.preventDefault();
@@ -24,8 +22,10 @@ addRecipeForm.addEventListener("submit", function(submitEvent) {
     recipes.push({id, name, url, image, category});
     //resets form fields to blank
     addRecipeForm.reset();
-    //testing - remove
-    console.log(recipes);
+    let block = document.querySelector(".success-message");
+    let recipeAddedMessage = document.createElement("p");
+    recipeAddedMessage.innerHTML = "Your recipe has been added!";
+    block.appendChild(recipeAddedMessage);
     //saves recipes array with new recipe to localStorage
     let storage = window.localStorage;
     let setJSON = JSON.stringify(recipes);

@@ -5,8 +5,6 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     submitEvent.preventDefault();
     //clears previous menu and returns an empty currentMenu array
     currentMenu.splice(0);
-    //test-delete
-    console.log(currentMenu);
     //grabs form values and assigns to variables
     let breakfastCount=document.getElementById("breakfast").value;
     let lunchCount=document.getElementById("lunch").value;
@@ -20,8 +18,6 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     if (dinnerCount > daysPlanned) {
         daysPlanned = dinnerCount;
     }
-    //test-delete
-    console.log(daysPlanned);
     
     //shuffles recipes
     recipes.sort(function (a,b) {
@@ -57,9 +53,6 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     let storage = window.localStorage;
     let setJSON = JSON.stringify(currentMenu);
     storage.setItem("menuRecipes", setJSON);
-
-    //test - delete
-    console.log(currentMenu);
 
     //displays success message and table with meal plan
     //setup

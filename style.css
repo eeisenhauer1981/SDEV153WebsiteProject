@@ -164,7 +164,7 @@ a:hover, a:active {
   color: var(--base-color);
 }
 
-.pages-nav a {
+.pages-nav a, .header-title a {
   color: var(--accent-color);
 }
 
