@@ -375,6 +375,10 @@ caption {
     margin: 0px auto;
     padding: 8px 10px 40px 10px;
   }
+
+  .breakfast, .lunch, .dinner {
+  display: grid;
+}
   
   /*ul*/
   .home-page-nav ul{

@@ -1,3 +1,44 @@
+//adds recipes to page
+//list element displays recipe image (if one exists), recipe name, and "View Recipe" prompt
+function addRecipes(nextRecipe, recipeList) {
+    //dynamically assigns description for img alt with recipe name
+    let imgDescription = "Photo of " + nextRecipe.name;
+
+    //creates a new li and assigns individual recipe information to the correct HTML element to be displayed on the page
+    let singleRecipe = document.createElement("li");
+    singleRecipe.innerHTML = 
+        `<a href=${nextRecipe.url} target="_blank"><img src=${nextRecipe.image} alt=${imgDescription}><div class="recipe-card-text"><h3>${nextRecipe.name}</h3><p>View Recipe</p></div></a>`;
+    recipeList.appendChild(singleRecipe);
+}
+
+//if width is 500px+, all recipes are displayed in grid; expand buttons are disabled
+function setDesktopView(section, sectionButton) {
+    section.style.display= "grid";
+    sectionButton.disabled = true;
+    sectionButton.setAttribute("aria-disabled", "true");
+}
+
+//if width is under 500px, recipes are collapsed; expand buttons are enabled and when clicked, recipes are displayed in a column
+function setMobileView(section, sectionButton, category) {
+    section.style.display = "none";
+    sectionButton.disabled = false;
+    sectionButton.setAttribute("aria-label", "Expand " + category + " recipe list");
+    sectionButton.setAttribute("aria-expanded", "false");
+    sectionButton.setAttribute("aria-controls", category + "-reveal");
+}
+
+//button functionality to expand or collapse recipes in each meal category
+function expandOrClose(section, sectionButton) {
+    if (section.style.display=="none") {
+        section.style.display="flex";
+        sectionButton.setAttribute("aria-expanded", "true");
+    }
+    else {
+        section.style.display="none";
+        sectionButton.setAttribute("aria-expanded", "false");
+    }
+}
+
 //loads recipe collection
 let recipes = [];
 //checks to see if any recipes are saved in localStorage
