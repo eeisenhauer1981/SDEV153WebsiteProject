@@ -62,6 +62,18 @@ footer {
   margin-left: 10px;
 }
 
+.recipe-search {
+  border-radius: 0;
+  margin: 20px;
+  margin-bottom: 0;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
 /*button*/
 button {
   background: none;
@@ -128,7 +140,7 @@ h3 {
 .recipe-list-container h3 {
   font-style: normal;
   color: var(--accent-color);
-  margin: 3% 1% 1% 1%;
+  margin-bottom: 5px;
 }
 
 footer h4 {
@@ -153,7 +165,8 @@ img {
 
 /*a*/
 a {
-  text-decoration: none;  
+  text-decoration: none;
+  color: var(--dark-accent-color);
 }
 
 a:hover, a:active {
@@ -167,11 +180,6 @@ a:hover, a:active {
 
 .pages-nav a, .header-title a {
   color: var(--accent-color);
-}
-
-.recipe-list-container li a {
-  display: flex;
-  flex-direction: row;
 }
 
 /*ul*/
@@ -222,6 +230,8 @@ li {
 }
 
 .recipe-list-container li {
+  display: flex;
+  flex-direction: row;
   border-radius: 5px;
   background-color: var(--base-color);
   padding: 20px;
@@ -254,6 +264,8 @@ p {
 
 .recipe-list-container p {
   padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /*form*/
@@ -292,6 +304,15 @@ input[type=submit] {
   padding: 7px 20px;
   text-transform: uppercase;
   letter-spacing: 1px; 
+}
+
+.recipe-search input[type=submit], .recipe-search input[type=text], .recipe-search label {
+  margin: 0;
+}
+
+.recipe-search input[type=text] {
+  width: 300px;
+  height: 21px;
 }
 
 form li {
@@ -393,7 +414,7 @@ caption {
   }
 
   /*li*/
-  .recipe-list-container li a {
+  .recipe-list-container li {
     display: flex;
     flex-direction: column;
     align-items: center;

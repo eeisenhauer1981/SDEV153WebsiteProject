@@ -1,4 +1,19 @@
 //adds recipes to page
+function categorizeRecipes(recipeList) {
+    for (let i = 0; i < recipeList.length; i++) {
+        //reviews recipe category and selects correct destination list (breakfast, lunch, or dinner)
+        if (recipeList[i].category == "breakfast") {
+            addRecipes (recipeList[i], breakfastRecipeList);
+        }
+        else if (recipeList[i].category == "lunch") {
+            addRecipes (recipeList[i], lunchRecipeList);
+        }
+        else {
+            addRecipes (recipeList[i], dinnerRecipeList);
+        }
+    }
+}
+
 //list element displays recipe image (if one exists), recipe name, and "View Recipe" prompt
 function addRecipes(nextRecipe, recipeList) {
     //dynamically assigns description for img alt with recipe name
@@ -7,7 +22,13 @@ function addRecipes(nextRecipe, recipeList) {
     //creates a new li and assigns individual recipe information to the correct HTML element to be displayed on the page
     let singleRecipe = document.createElement("li");
     singleRecipe.innerHTML = 
-        `<a href=${nextRecipe.url} target="_blank"><img src=${nextRecipe.image} alt=${imgDescription}><div class="recipe-card-text"><h3>${nextRecipe.name}</h3><p>View Recipe</p></div></a>`;
+        `<img src=${nextRecipe.image} alt=${imgDescription}>
+        <div class="recipe-card-text">
+            <h3>${nextRecipe.name}</h3>
+            <a href=${nextRecipe.url} target="_blank">View Recipe</a>
+            <p>Edit Recipe</p>
+            <p>Delete Recipe</p>
+        </div>`;
     recipeList.appendChild(singleRecipe);
 }
 
@@ -37,6 +58,23 @@ function expandOrClose(section, sectionButton) {
         section.style.display="none";
         sectionButton.setAttribute("aria-expanded", "false");
     }
+}
+
+//searches recipes array for matches to search terms entered by user
+function searchRecipes(searchString) {
+    let searchResults = [];
+    searchString = searchString.trim().toLowerCase();
+    for (let i = 0; i < recipes.length; i++) {
+        let nameFormatted = recipes[i].name.trim().toLowerCase();
+        if (nameFormatted.includes(searchString)) {
+            searchResults.push(recipes[i]);
+        }
+    }
+    return searchResults;
+}
+
+function clearRecipeList(recipeList) {
+    recipeList.replaceChildren();
 }
 
 //loads recipe collection
