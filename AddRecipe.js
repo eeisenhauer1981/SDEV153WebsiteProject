@@ -26,8 +26,5 @@ addRecipeForm.addEventListener("submit", function(submitEvent) {
     let recipeAddedMessage = document.createElement("p");
     recipeAddedMessage.innerHTML = "Your recipe has been added!";
     block.appendChild(recipeAddedMessage);
-    //saves recipes array with new recipe to localStorage
-    let storage = window.localStorage;
-    let setJSON = JSON.stringify(recipes);
-    storage.setItem("allRecipes", setJSON);
+    saveRecipes(recipes);
 })

@@ -8,7 +8,7 @@ let dinnerRecipeList = document.querySelector(".dinner");
 let breakfastExpandButton = document.querySelector(".breakfast-recipe-reveal");
 let lunchExpandButton = document.querySelector(".lunch-recipe-reveal");
 let dinnerExpandButton = document.querySelector(".dinner-recipe-reveal");
-
+console.log(recipes);
 //adds recipes to list
 //loops through each recipe in recipes array, identifies the category, then calls addRecipes function
 categorizeRecipes(recipes);

@@ -60,15 +60,16 @@ footer {
 
 .recipe-card-text {
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .recipe-search {
   border-radius: 0;
   margin: 20px;
   margin-bottom: 0;
-  height: 56px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: left;
   gap: 10px;
@@ -399,6 +400,11 @@ caption {
 
   .breakfast, .lunch, .dinner {
   display: grid;
+}
+
+.recipe-search {
+  height: 56px;
+  flex-direction: row;
 }
   
   /*ul*/

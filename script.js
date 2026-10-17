@@ -26,8 +26,7 @@ function addRecipes(nextRecipe, recipeList) {
         <div class="recipe-card-text">
             <h3>${nextRecipe.name}</h3>
             <a href=${nextRecipe.url} target="_blank">View Recipe</a>
-            <p>Edit Recipe</p>
-            <p>Delete Recipe</p>
+            <button id=${nextRecipe.id}>Delete Recipe</button>
         </div>`;
     recipeList.appendChild(singleRecipe);
 }
@@ -75,6 +74,13 @@ function searchRecipes(searchString) {
 
 function clearRecipeList(recipeList) {
     recipeList.replaceChildren();
+}
+
+//saves recipes array with new recipe to localStorage
+function saveRecipes(recipeList) {
+    let storage = window.localStorage;
+    let setJSON = JSON.stringify(recipeList);
+    storage.setItem("allRecipes", setJSON);
 }
 
 //loads recipe collection
