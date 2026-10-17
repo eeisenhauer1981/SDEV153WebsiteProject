@@ -93,6 +93,16 @@ header button {
   font-size: 110%;
 }
 
+.delete-button {
+  color: var(--dark-accent-color);
+  font-family: var(--basic-font), 'Arial', 'Sans Serif';
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
 /*h*/
 h1 {
   color: var(--accent-color);
@@ -170,7 +180,7 @@ a {
   color: var(--dark-accent-color);
 }
 
-a:hover, a:active {
+a:hover, a:active, .delete-button:hover {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -402,10 +412,10 @@ caption {
   display: grid;
 }
 
-.recipe-search {
-  height: 56px;
-  flex-direction: row;
-}
+  .recipe-search {
+    height: 56px;
+    flex-direction: row;
+  }
   
   /*ul*/
   .home-page-nav ul{
@@ -436,6 +446,11 @@ caption {
     width: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+  }
+
+  /*button*/
+  .delete-button {
+    text-align: center;
   }
 
 }

@@ -26,5 +26,5 @@ addRecipeForm.addEventListener("submit", function(submitEvent) {
     let recipeAddedMessage = document.createElement("p");
     recipeAddedMessage.innerHTML = "Your recipe has been added!";
     block.appendChild(recipeAddedMessage);
-    saveRecipes(recipes);
+    saveRecipes(recipes, "allRecipes");
 })

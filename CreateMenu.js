@@ -50,9 +50,7 @@ createMenuForm.addEventListener("submit", function(submitEvent) {
     //resets form fields to blank
     createMenuForm.reset();
     //saves menu array to localStorage
-    let storage = window.localStorage;
-    let setJSON = JSON.stringify(currentMenu);
-    storage.setItem("menuRecipes", setJSON);
+    saveRecipes(currentMenu, "menuRecipes");
 
     //displays success message and table with meal plan
     //setup

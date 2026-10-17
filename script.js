@@ -1,4 +1,5 @@
-//adds recipes to page
+//categorizeRecipes and addRecipes work together to add recipes to page
+//recognizes recipe meal category to assign it to the right section
 function categorizeRecipes(recipeList) {
     for (let i = 0; i < recipeList.length; i++) {
         //reviews recipe category and selects correct destination list (breakfast, lunch, or dinner)
@@ -26,9 +27,30 @@ function addRecipes(nextRecipe, recipeList) {
         <div class="recipe-card-text">
             <h3>${nextRecipe.name}</h3>
             <a href=${nextRecipe.url} target="_blank">View Recipe</a>
-            <button id=${nextRecipe.id}>Delete Recipe</button>
+            <button class="delete-button" data-recipe-id=${nextRecipe.id} aria-label="Delete ${nextRecipe.name}">Delete Recipe</button>
         </div>`;
     recipeList.appendChild(singleRecipe);
+    //adds event listener and delete recipe actions for delete recipe button
+    let recipeDeleteButton = singleRecipe.querySelector("button");
+    recipeDeleteButton.addEventListener("click", function(deleteClick) {
+        //identifies data-recipe-id when button is clicked
+        let deleteRecipeString = deleteClick.currentTarget.dataset.recipeId;
+        //converts data-recipe-id string to number and finds index of recipe from recipes array with matching id. this is the recipe to delete
+        let deleteRecipe = recipes.findIndex(recipe => recipe.id === Number(deleteRecipeString));
+        //launches confirmation popup so user can confirm delete
+        let deleteConfirm = confirm("Click OK to permanently delete " + recipes[deleteRecipe].name + " from your collection.");
+        //if user OKs delete, deletes the recipe at the index deleteRecipe
+        if (deleteConfirm) {
+            //deletes recipe from recipes array
+            recipes.splice(deleteRecipe);
+            //saves new recipe array to localStorage
+            saveRecipes(recipes, "allRecipes");
+            clearRecipeList(breakfastRecipeList);
+            clearRecipeList(lunchRecipeList);
+            clearRecipeList(dinnerRecipeList);
+            categorizeRecipes(recipes);
+        }
+    });
 }
 
 //if width is 500px+, all recipes are displayed in grid; expand buttons are disabled
@@ -77,10 +99,10 @@ function clearRecipeList(recipeList) {
 }
 
 //saves recipes array with new recipe to localStorage
-function saveRecipes(recipeList) {
+function saveRecipes(recipeList, storageLocation) {
     let storage = window.localStorage;
     let setJSON = JSON.stringify(recipeList);
-    storage.setItem("allRecipes", setJSON);
+    storage.setItem(storageLocation, setJSON);
 }
 
 //loads recipe collection
